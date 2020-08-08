@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+
+.btn {
+  @apply font-bold py-3 px-8 text-sm transition duration-300 ease-linear tracking-wider;
+}
+.btn:focus {
+  @apply outline-none shadow-outline-primary;
+}
+
+.btn-primary {
+  @apply bg-primary text-white;
+}
+.btn-primary:hover {
+  @apply bg-primary bg-opacity-50;
+}
+.btn-primary:active {
+  @apply transform translate-y-1;
+}
+
+.input {
+  @apply appearance-none border-b w-full py-2 text-darkblue bg-transparent leading-tight;
+}
+
+.input:focus {
+  @apply outline-none border-primary;
+}
+
+.label {
+  @apply block text-sm text-gray-600 font-medium mb-1;
+}
+
+select {
+  @apply block appearance-none bg-white w-full border px-4 py-2 pr-8 leading-tight rounded;
+}
+
+.select:focus {
+  @apply outline-none shadow-outline-primary border-primary;
+}
+
+.error {
+  @apply block text-xs font-semibold text-red-500;
+}
+
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+@screen sm {
+  .container {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 0.3s ease-in-out;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+  transform: translateX(-5px);
+}
+
+.tspacing {
+  border-collapse: separate;
+  border-spacing: 0 15px;
+}
+
+/* style for custom checkbox */
+.wrapper {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  user-select: none;
+  @apply font-karla text-white;
+}
+
+.wrapper input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #fff;
+  @apply border rounded;
+}
+
+.wrapper:hover input ~ .checkmark {
+  @apply bg-primary bg-opacity-25;
+}
+
+/* When the checkbox is checked, add background color */
+.wrapper input:checked ~ .checkmark {
+  @apply bg-primary border-2;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+/* .checkmark:after {
+  content: '';
+  position: absolute;
+  display: none;
+} */
+
+/* Show the checkmark when checked */
+/* .wrapper input:checked ~ .checkmark:after {
+  display: block;
+}
+ */
+/* Style the checkmark/indicator */
+/* .wrapper .checkmark:after {
+  left: 10px;
+  top: 6px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+} */
