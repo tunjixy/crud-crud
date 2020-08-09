@@ -203,7 +203,43 @@ export default {
     return {
       error: '',
       roles: ['Admin', 'Staff'],
-      employees: [],
+      employees: [
+        {
+          firstname: 'Joshua',
+          lastname: 'Bakare',
+          email: 'josh.bakery@gmail.com',
+          phone: '+2348012345678',
+          role: 'Admin'
+        },
+        {
+          firstname: 'Jane',
+          lastname: 'Clement',
+          email: 'clement@gmail.com',
+          phone: '+2347012005678',
+          role: 'Staff'
+        },
+        {
+          firstname: 'John',
+          lastname: 'Ngoka',
+          email: 'john@gmail.com',
+          phone: '+2348012388678',
+          role: 'Staff'
+        },
+        {
+          firstname: 'Omotayo',
+          lastname: 'Adeleke',
+          email: 'omo@yahoo.com',
+          phone: '+234908388678',
+          role: 'Staff'
+        },
+        {
+          firstname: 'Gloria',
+          lastname: 'Amadi',
+          email: 'omo@yahoo.com',
+          phone: '+234902210678',
+          role: 'Staff'
+        }
+      ],
       employee: {},
       loading: false,
       showModal: false,
@@ -238,7 +274,7 @@ export default {
     search(value) {
       this.searchTerm = value
     },
-    async fetchEmployees() {
+    /* async fetchEmployees() {
       try {
         this.loading = true
         const data = await this.$http.get('/employees')
@@ -249,7 +285,7 @@ export default {
         this.error = true
         // console.log(err)
       }
-    },
+    }, */
     employeeAdded() {
       this.hide()
       this.fetchEmployees()
