@@ -1,7 +1,7 @@
 <template>
   <validation-observer ref="form" v-slot="{ passes }" slim>
     <h4 class="text-lg font-bold mb-4">
-      Add New contact
+      Edit contact
     </h4>
     <form @submit.prevent="passes(onSubmit)">
       <div class="flex flex-wrap sm:-mx-2">
