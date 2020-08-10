@@ -9,7 +9,7 @@ module.exports = {
     // configure the workbox plugin
     workboxPluginMode: 'InjectManifest',
     workboxOptions: {
-      swSrc: 'dev/sw.js'
+      swSrc: 'src/service-worker.js'
     }
   }
 }
