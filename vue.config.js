@@ -7,7 +7,7 @@ module.exports = {
     appleMobileWebAppStatusBarStyle: '#69da55',
 
     // configure the workbox plugin
-    workboxPluginMode: 'InjestManifest',
+    workboxPluginMode: 'InjectManifest',
     workboxOptions: {
       swSrc: 'dev/sw.js'
     }
